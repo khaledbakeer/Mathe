@@ -11,7 +11,7 @@ public interface Constatnts {
     Font StyleFont = new Font("Tahoma", 10, 10);
 
     // Main Frame
-    int MainFram_Height = 600;
+    int MainFram_Height = 100;
     int MainFram_Width = 800;
 
     // Add Function Button
