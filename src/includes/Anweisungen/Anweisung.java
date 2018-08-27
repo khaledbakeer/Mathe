@@ -7,33 +7,58 @@ import includes.Anweisungen.Rechnen.Rechnen;
  */
 public class Anweisung {
 
+    private CallClass callClass = new CallClass();
+    private String textOhneSpaces;
 
     /**
      * Konstruktor
-     *
+     * <p>
      * Hier wird die {@link TexteLesen#anweisung} gewählt.
      *
      * @param textOhneSpaces String
-     * @param anweisung String
+     * @param anweisung      String
      */
     public Anweisung(String textOhneSpaces, String anweisung) {
+        this.textOhneSpaces = textOhneSpaces;
         System.out.println("Die Anweisung ist: " + anweisung);
 
         switch (anweisung) {
             case "Rechnen":
+                callClass.Rechnen();
+                break;
 
-                try {
-                    System.out.println("Anweisung: Rechnen");
-                    new Rechnen(textOhneSpaces);
-                } catch (Exception e) {
-                    System.out.println("Anweisung: Error!");
-                    e.printStackTrace();
-                }
-
+            case "":
+                callClass.FreiRechnen();
                 break;
         }
 
 
+    }
+
+
+    class CallClass {
+        public CallClass() {
+
+        }
+
+        private void Rechnen() {
+            try {
+                new Rechnen(textOhneSpaces);
+            } catch (Exception e) {
+                System.out.println("Anweisung: Error! -> Rechnen");
+                e.printStackTrace();
+            }
+        }
+
+        private void FreiRechnen() {
+            System.out.println("FreiRechnen");
+            try {
+                new FreiRechnen(textOhneSpaces);
+            } catch (Exception e) {
+                System.out.println("Anweisung: Error! -> FreiRechnen");
+                e.printStackTrace();
+            }
+        }
     }
 
 
