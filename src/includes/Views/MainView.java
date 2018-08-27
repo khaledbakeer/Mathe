@@ -42,11 +42,11 @@ public class MainView extends JFrame implements Constatnts {
 
 
     private void initComponents() {
-        addFunc = new JButton(AddFuncButton_Text);
-        addFunc.setBounds(AddFuncButton_XPos, AddFuncButton_YPos, 100, 20);
-        addFunc.setFont(StyleFont);
-
-        add(addFunc);
+//        addFunc = new JButton(AddFuncButton_Text);
+//        addFunc.setBounds(AddFuncButton_XPos, AddFuncButton_YPos, 100, 20);
+//        addFunc.setFont(StyleFont);
+//
+//        add(addFunc);
 
 
         txtFunc = new JTextField();
