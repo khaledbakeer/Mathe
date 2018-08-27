@@ -2,6 +2,9 @@ package includes.Configurations;
 
 import java.awt.*;
 
+/**
+ * Main Constants
+ */
 public interface Constatnts {
 
     // Style:
