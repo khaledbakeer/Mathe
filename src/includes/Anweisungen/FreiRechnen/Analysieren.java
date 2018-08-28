@@ -83,14 +83,14 @@ public class Analysieren extends FreiRechnen {
         } else if ((ch >= '0' && ch <= '9') || ch == '.') { // Nummern
             while ((ch >= '0' && ch <= '9') || ch == '.') nextChar();
             x = Double.parseDouble(str.substring(startPos, this.pos));
-        } else if (ch >= 'a' && ch <= 'z') { // functions
-            while (ch >= 'a' && ch <= 'z') nextChar();
+        } else if (ch >= 'a' && ch <= 'z' || ch >= 'A' && ch <= 'Z') { // functions
+            while (ch >= 'a' && ch <= 'z' || ch >= 'A' && ch <= 'Z') nextChar();
             String func = str.substring(startPos, this.pos);
             x = factorAnalysieren();
-            if (func.equals("sqrt")) x = Math.sqrt(x);
-            else if (func.equals("sin")) x = Math.sin(Math.toRadians(x));
-            else if (func.equals("cos")) x = Math.cos(Math.toRadians(x));
-            else if (func.equals("tan")) x = Math.tan(Math.toRadians(x));
+            if (func.equals("Sqrt")) x = Math.sqrt(x);
+            else if (func.equals("Sin")) x = Math.sin(Math.toRadians(x));
+            else if (func.equals("Cos")) x = Math.cos(Math.toRadians(x));
+            else if (func.equals("Tan")) x = Math.tan(Math.toRadians(x));
             else throw new RuntimeException("Unknown function: " + func);
         } else {
             throw new RuntimeException("Unexpected: " + (char) ch);

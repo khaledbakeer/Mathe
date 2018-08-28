@@ -7,10 +7,10 @@ public class Sin extends Rechnen {
     private Double sinWert;
 
     /**
-     * @param sin
+     * @param x
      */
-    public Sin(double sin) {
-        sinWert = Math.sqrt(sin);
+    public Sin(double x) {
+        sinWert = Math.sin(Math.toRadians(x));
     }
 
     /**
